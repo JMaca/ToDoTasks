@@ -1,7 +1,5 @@
 package org.example.ToDoTasks.dto;
 
-import org.example.ToDoTasks.model.Task;
-
 import java.time.LocalDate;
 
 public class TaskDTO {
@@ -26,9 +24,11 @@ public class TaskDTO {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getDescription() {
         return description;
     }
@@ -48,6 +48,7 @@ public class TaskDTO {
     public LocalDate getDueDate() {
         return dueDate;
     }
+
     public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
     }
