@@ -38,5 +38,5 @@ public interface TaskRepository extends JpaRepository<Task, Long> {
      SELECT * FROM tasks
      WHERE priority = 'High' AND due_date = dueDate AND completed = true;
      */
-    List<Task> findByPriorityAndDueDateAndCompleted();
+    List<Task> findByPriorityAndDueDateAndCompleted(String priority, LocalDate dueDate, Boolean completed);
 }
