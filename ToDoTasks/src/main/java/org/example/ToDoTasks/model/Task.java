@@ -46,6 +46,11 @@ public class Task {
         return id;
     }
 
+    // ONLY FOR TESTING PURPOSES - Not for Production.
+    public void setID(long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
