@@ -15,8 +15,13 @@ import java.util.stream.Collectors;
 @RequestMapping("/tasks") // Specifies base URL endpoint for this controller
 public class TaskController {
 
-    @Autowired // Injects class (dependency injection) Spring creates the required object.
-    private TaskService taskService;
+    private final TaskService taskService;
+
+    // Constructor for constructor injection
+    @Autowired
+    public TaskController(TaskService taskService) {
+        this.taskService = taskService;
+    }
 
     //CRUD methods Create, Read, Update, Delete - HTTP status = 2XX success, 4XX Client Error, 5XX Server Error
     @PostMapping // POST method (Create)
